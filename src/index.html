@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parlatia, propuesta de rediseño</title>
+<meta name="description" content="Propuesta de rediseño del sitio de Parlatia con la misma marca: colores, tipografías y logo.">
+<meta name="theme-color" content="#0e1730">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Parlatia, inicio"><img src="assets/logo.svg" alt=""><span>Parlatia</span></a>
+    <nav aria-label="Principal">
+      <a href="#demo">Demo</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#panel">Panel</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <button class="btn btn--sm" data-open>Hablar con ventas</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="hero dark">
+  <div class="wrap">
+    <div>
+      <h1>Tus leads no esperan, así que Parlatia los llama <em>en 30 segundos.</em></h1>
+      <p class="lead">Parlatia es tu comercial de voz con IA. Llama a cada lead nuevo, conversa con naturalidad y pasa a tu equipo solo a las personas que quieren avanzar. Trabaja todos los días, a cualquier hora.</p>
+      <div class="cta">
+        <button class="btn" data-open>Hablar con ventas</button>
+        <a class="link" href="#demo">Escuchar una llamada de ejemplo <span aria-hidden="true">&darr;</span></a>
+      </div>
+    </div>
+    <div class="phone-col" id="heroPhone"></div>
+  </div>
+</section>
+
+<!-- Demo -->
+<section class="sec soft" id="demo">
+  <div class="wrap">
+    <div class="head">
+      <h2>Mientras el cliente habla, Parlatia ya está actualizando tu CRM.</h2>
+      <p class="lead">Contesta la llamada y mira cómo se completa la ficha del lead mientras hablan. El audio es de la demo de Parlatia y la ficha es un ejemplo.</p>
+    </div>
+    <div class="tabs" role="group" aria-label="Sector">
+      <button class="tab" data-sector="seguros" aria-pressed="true">Aseguradoras</button>
+      <button class="tab" data-sector="autos" aria-pressed="false">Concesionarios</button>
+    </div>
+    <div class="demo">
+      <div class="phone-col">
+        <div id="demoPhone"></div>
+        <p class="hint" id="hint"></p>
+        <button class="again" id="again" hidden>Volver a escuchar</button>
+      </div>
+      <div class="crm" aria-live="polite">
+        <div class="crm__h"><h3 id="crmName"></h3><span class="crm__s" id="crmStatus"></span></div>
+        <p class="crm__sub">Ficha del lead en tu CRM</p>
+        <div id="crmRows"></div>
+        <p class="crm__f" id="crmFoot"></p>
+      </div>
+    </div>
+
+    <div class="uc" id="uc">
+      <h3 id="ucT"></h3>
+      <p class="uc__i" id="ucI"></p>
+      <ul id="ucL"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="sec" id="como">
+  <div class="wrap">
+    <div class="head">
+      <h2>Cada lead recorre cuatro pasos sin que nadie toque una tecla.</h2>
+      <p class="lead">Sigue a un lead de ejemplo, Javier Ruiz, desde que llena un formulario hasta que queda en tu CRM.</p>
+    </div>
+    <div class="fl" id="flow">
+      <div class="fl-rail">
+        <button class="fl-s act" type="button" aria-label="Paso 1: Llama"><span class="fl-n"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><span class="fl-t">Llama</span></button>
+        <button class="fl-s" type="button" aria-label="Paso 2: Conversa"><span class="fl-n"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H10l-5 4v-4H4z"/></svg></span><span class="fl-t">Conversa</span></button>
+        <button class="fl-s" type="button" aria-label="Paso 3: Clasifica"><span class="fl-n"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.500l3 3 5-6"/></svg></span><span class="fl-t">Clasifica</span></button>
+        <button class="fl-s" type="button" aria-label="Paso 4: Transfiere y sincroniza"><span class="fl-n"><svg viewBox="0 0 24 24"><path d="M4 8h14l-3-3M20 16H6l3 3"/></svg></span><span class="fl-t">Transfiere y sincroniza</span></button>
+      </div>
+      <div class="fl-main">
+        <div class="fl-stage">
+          <div class="fl-sc on" data-len="6800">
+            <p class="fl-d">En cuanto entra un lead nuevo, Parlatia llama desde tu numeración, al contacto y a la hora adecuados.</p>
+            <div class="fl-it fl-lg" data-at="500"><time>12:04:07</time><div><b>Entra un lead nuevo</b><span>Javier Ruiz, formulario web, póliza de auto</span></div></div>
+            <div class="fl-it fl-lg" data-at="1700"><time>12:04:09</time><div><b>Parlatia lee la ficha</b><span>Póliza de auto, vence el 30 de junio</span></div></div>
+            <div class="fl-it fl-lg" data-at="3000"><time>12:04:12</time><div><b>Revisa tus reglas</b><span>Dentro del horario permitido, desde tu numeración</span></div></div>
+            <div class="fl-it fl-lg" data-at="4300" data-count="22"><time>12:04:29</time><div><b>Marca al lead</b><span>Segundos desde que entró</span></div><span class="fl-big"><span class="fl-cnt">22</span> s</span></div>
+          </div>
+          <div class="fl-sc" data-len="7800">
+            <p class="fl-d">Habla en español con naturalidad, entiende interrupciones y objeciones y responde en tiempo real.</p>
+            <div class="fl-chat">
+              <div class="fl-it fl-b p" data-at="400"><em>Parlatia</em>Javier, tu póliza de auto se renueva el 30 de junio con la misma cobertura.</div>
+              <div class="fl-it fl-b c" data-at="2200"><em>Cliente, interrumpe</em>Perfecto, ¿y puedo pagarla en dos plazos?</div>
+              <div class="fl-it fl-b p" data-at="4200"><em>Parlatia, se detiene y responde</em>Eso lo ve mejor una persona del equipo. ¿Te paso con ella ahora?</div>
+              <div class="fl-it fl-b c" data-at="6000"><em>Cliente</em>Sí, pásame.</div>
+            </div>
+          </div>
+          <div class="fl-sc" data-len="7000">
+            <p class="fl-d">Cada llamada termina con un resultado claro y con los datos que dijo el cliente.</p>
+            <div class="fl-it fl-kv" data-at="400"><span>Resultado de la llamada</span><div class="fl-opts"><div class="fl-opt"><i></i>Contactado</div><div class="fl-opt" data-at="1700"><i></i>Transferido</div><div class="fl-opt"><i></i>Devolución solicitada</div><div class="fl-opt"><i></i>Sin respuesta</div></div></div>
+            <div class="fl-it fl-kv" data-at="2900"><span>Interés detectado</span><b>Pagar en dos plazos</b></div>
+            <div class="fl-it fl-kv" data-at="4000"><span>Datos del cliente</span><b>Póliza de auto, vence el 30 de junio</b></div>
+            <div class="fl-it fl-kv" data-at="5100"><span>Siguiente acción</span><b>Pasar a tu equipo</b></div>
+          </div>
+          <div class="fl-sc" data-len="8600">
+            <p class="fl-d">Cuando detecta interés, pasa la llamada a tu agente con un resumen hablado y deja el resultado en tu CRM.</p>
+            <div class="fl-it fl-lg" data-at="400"><time>1:12</time><div><b>Pone al lead en espera</b><span>Llama a tu agente de guardia</span></div></div>
+            <div class="fl-it fl-lg" data-at="1800"><time>1:15</time><div><b>Resume la llamada a tu agente</b><span>«Javier renueva su póliza de auto y pregunta si puede pagar en dos plazos.»</span></div></div>
+            <div class="fl-it fl-lg" data-at="3400"><time>1:21</time><div><b>Pasa la llamada</b><span>Tu agente sigue la conversación con todo el contexto</span></div></div>
+            <div class="fl-it fl-lg" data-at="4800"><time>1:22</time><div><b>Sincroniza con tu CRM</b><span>Resultado, transcripción y grabación, por webhook</span></div></div>
+            <div class="fl-it fl-crm" data-at="6000"><div class="fl-crm__h"><b>Javier Ruiz</b><span>Pasado a una persona</span></div><p>Ficha actualizada en tu CRM</p></div>
+          </div>
+          <button class="fl-again" id="flAgain" type="button" hidden>Ver de nuevo</button>
+        </div>
+      </div>
+    </div>
+    <p class="flow-note">Tiempos y datos de ejemplo.</p>
+    <p class="after">Parlatia atiende a cualquier hora, todos los días, y nunca cuelga una llamada.</p>
+  </div>
+</section>
+
+<!-- Panel -->
+<section class="sec soft" id="panel">
+  <div class="wrap">
+    <div class="head"><h2>Defines las reglas de negocio tú mismo y ves cada llamada en un solo panel.</h2></div>
+    <div class="feats">
+      <div><h3>Reglas de negocio</h3><p>Decides cuándo llama, cuándo transfiere y cuándo para, sin abrir tickets. Se aplican en la siguiente llamada.</p></div>
+      <div><h3>Historial tuyo</h3><p>Las grabaciones y transcripciones son tuyas y se pueden exportar.</p></div>
+      <div><h3>Datos aislados</h3><p>La información de cada cliente está separada de la de los demás.</p></div>
+      <div><h3>Transferencia con contexto</h3><p>Quien recibe la llamada escucha antes un resumen de la conversación.</p></div>
+    </div>
+    <p class="mock-note">Maqueta con datos ilustrativos. Entra en Reglas para activar y añadir reglas y probar qué hace Parlatia.</p>
+    <div class="db">
+      <div class="db__nav" aria-label="Secciones del panel">
+        <div class="db__brand"><img src="assets/logo.svg" alt="">Parlatia</div>
+        <button data-view="resumen" aria-current="true">Resumen</button>
+        <button data-view="llamadas" aria-current="false">Llamadas</button>
+        <button data-view="reglas" aria-current="false">Reglas</button>
+        <div class="db__who"><b>Tu empresa</b>Campaña de renovaciones</div>
+      </div>
+      <div class="db__main">
+        <div class="view" id="v-resumen">
+          <div class="db__bar"><h3>Resumen</h3><span>Semana del 16 al 22 de noviembre</span></div>
+          <div class="kpis">
+            <div class="k"><span>Llamadas realizadas</span><b>1.240</b><em>7 días</em></div>
+            <div class="k"><span>Llamadas contestadas</span><b>856</b><em>69% de las realizadas</em></div>
+            <div class="k"><span>Pasadas a una persona</span><b>142</b><em>17% de las contestadas</em></div>
+            <div class="k"><span>Tiempo hasta la primera llamada</span><b>22 s</b><em>de media</em></div>
+          </div>
+          <div class="row2">
+            <div class="box">
+              <h4>Llamadas por día <span class="lg"><span><i style="background:var(--blue-700)"></i>Contestadas</span><span><i style="background:var(--blue-200)"></i>Sin respuesta</span></span></h4>
+              <div class="bars" id="bars"></div>
+            </div>
+            <div class="box">
+              <h4>Resultado de las llamadas contestadas</h4>
+              <div class="rs o"><span>Pasada a una persona</span><b>142</b><i style="--w:36%"></i></div>
+              <div class="rs"><span>Confirmó o agendó</span><b>391</b><i style="--w:100%"></i></div>
+              <div class="rs"><span>Pidió que lo llamen más tarde</span><b>203</b><i style="--w:52%"></i></div>
+              <div class="rs"><span>No le interesa</span><b>120</b><i style="--w:31%"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view" id="v-llamadas" hidden>
+          <div class="db__bar"><h3>Llamadas</h3><span>Hoy</span></div>
+          <div class="filters" role="group" aria-label="Filtrar llamadas">
+            <button data-f="all" aria-pressed="true">Todas</button>
+            <button data-f="persona" aria-pressed="false">Pasadas a una persona</button>
+            <button data-f="sin" aria-pressed="false">Sin respuesta</button>
+          </div>
+          <div class="tblw"><table class="tbl"><thead><tr><th>Hora</th><th>Lead</th><th>Caso</th><th>Resultado</th><th>Duración</th></tr></thead><tbody id="rows"></tbody></table></div>
+        </div>
+
+        <div class="view" id="v-reglas" hidden>
+          <div class="db__bar"><h3>Reglas de negocio</h3><span>Se aplican en la siguiente llamada</span></div>
+          <div class="rgrid">
+            <div>
+              <ul class="rlist" id="rlist"></ul>
+              <form class="radd" id="radd">
+                <p class="rt">Añadir una regla</p>
+                <label>Cuando <select class="slc" id="rc"></select></label>
+                <label>Parlatia <select class="slc" id="ra"></select></label>
+                <button class="btn btn--sm" type="submit">Añadir regla</button>
+              </form>
+            </div>
+            <div class="box">
+              <h4>Probar una situación</h4>
+              <div class="sits" id="sits" role="group" aria-label="Situaciones"></div>
+              <div class="rres" id="rres" aria-live="polite"><span class="none">Elige una situación para ver qué hace Parlatia con las reglas activas.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Calculator -->
+<section class="sec" id="calculadora">
+  <div class="wrap calc">
+    <div>
+      <h2>Cada lead que nadie llama a tiempo es una venta que nadie intentó.</h2>
+      <p class="lead" style="margin-top:20px">Tu equipo no llega a todo, y tu CRM solo se entera de lo que alguien apuntó. Mueve los números y mira cuántas ventas se quedan sin intentar cada mes.</p>
+    </div>
+    <div class="card">
+      <div class="field"><label for="c1">Leads nuevos al mes <output id="o1"></output></label><input id="c1" type="range" min="50" max="2000" step="10" value="400"></div>
+      <div class="field"><label for="c2">Leads que hoy se llaman en menos de 5 minutos <output id="o2"></output></label><input id="c2" type="range" min="0" max="100" step="5" value="30"></div>
+      <div class="field"><label for="c3">De los leads llamados a tiempo, los que acaban comprando <output id="o3"></output></label><input id="c3" type="range" min="1" max="40" step="1" value="10"></div>
+      <div class="field"><label for="c4">Ingreso medio por venta <output id="o4"></output></label><input id="c4" type="range" min="100" max="10000" step="100" value="1800"></div>
+      <div class="out" style="margin-top:36px" aria-live="polite">
+        <small>Ingreso mensual que hoy se queda sin intentar</small>
+        <div class="big" id="oBig"></div>
+        <p id="oTxt"></p>
+      </div>
+      <p class="note">Los valores iniciales son ilustrativos. Cámbialos por los de tu empresa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec soft" id="preguntas">
+  <div class="wrap">
+    <div class="head"><h2>Las preguntas que más nos hacen.</h2></div>
+    <div class="faq">
+      <details><summary>¿Suena robótico?</summary><p>No. Usa voces de última generación y entiende las interrupciones en tiempo real, así que la conversación fluye como con una persona.</p></details>
+      <details><summary>¿Cómo se integra con mi CRM?</summary><p>Con un webhook de salida. Parlatia envía a tu endpoint la transcripción, la clasificación, los campos extraídos y la grabación. Funciona con Salesforce, HubSpot y Zoho.</p></details>
+      <details><summary>¿Es legal grabar las llamadas?</summary><p>Sí, con un aviso configurable al inicio de la llamada. Parlatia cumple el artículo 50 del EU AI Act y la guía de la AEPD desde el primer día.</p></details>
+      <details><summary>¿Qué pasa si el lead prefiere hablar con una persona?</summary><p>Parlatia lo pone en espera, da un resumen hablado a tu agente y le pasa la llamada. Si no hay nadie disponible, hace una transferencia directa y deja el registro para devolver la llamada.</p></details>
+      <details><summary>¿En qué idiomas habla?</summary><p>Por ahora, en español. Pronto hablará muchos más idiomas.</p></details>
+      <details><summary>¿Puedo cambiar lo que hace Parlatia?</summary><p>Sí, cuando quieras. Desde tu panel ajustas las reglas de negocio y lo que dice Parlatia, y el cambio se aplica en la siguiente llamada.</p></details>
+      <details><summary>¿Mis datos están seguros?</summary><p>Los datos de cada cliente están aislados de los demás y viajan y se guardan cifrados (TLS 1.2 o superior y AES-256). Las grabaciones quedan de tu lado, no del proveedor, y todo cumple el RGPD.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="sec dark cta-sec">
+  <div class="wrap">
+    <h2>Ningún lead debería enfriarse esperando una llamada.</h2>
+    <p class="lead">Cuéntanos tu caso y te respondemos en menos de 24 horas, sin compromiso.</p>
+    <button class="btn" data-open>Hablar con ventas</button>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><img src="assets/logo.svg" alt=""><span>Parlatia</span></a>
+      <p>El comercial de voz que llama, conversa y registra cada resultado en tu CRM.</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <a href="tel:+34913728321">+34 913 72 83 21</a>
+      <a href="#" data-open>Hablar con ventas</a>
+      <span>Calle Poeta Joan Maragall 23, 28020 Madrid</span>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Aviso legal</a>
+      <a href="#">Política de privacidad</a>
+      <a href="#">Política de cookies</a>
+    </div>
+    <p class="copy">© 2026 Parlatia. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<dialog id="contact" aria-labelledby="mt">
+  <div class="m" id="mbox">
+    <button class="x" id="mclose" aria-label="Cerrar">&times;</button>
+    <form id="mform">
+      <h2 id="mt">Hablemos de tu caso</h2>
+      <p class="sub">Cuéntanos qué necesitas. Te respondemos en menos de 24 horas, sin compromiso.</p>
+      <label>Nombre <input name="n" required autocomplete="name"></label>
+      <label>Empresa <input name="e" required autocomplete="organization"></label>
+      <label>Email <input name="m" type="email" required autocomplete="email"></label>
+      <label>Teléfono <small>(opcional)</small><input name="t" type="tel" autocomplete="tel"></label>
+      <label>¿En qué podemos ayudarte? <textarea name="q" required></textarea></label>
+      <button class="btn" type="submit">Enviar mensaje</button>
+      <p class="proto">Maqueta: este formulario todavía no envía datos.</p>
+    </form>
+    <div class="thanks">
+      <h2>Mensaje enviado</h2>
+      <p class="sub">Gracias por escribirnos. Te respondemos en menos de 24 horas en el email que nos dejaste.</p>
+      <button class="btn" id="mdone" type="button">Cerrar</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
